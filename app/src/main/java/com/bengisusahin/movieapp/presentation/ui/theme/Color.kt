@@ -1,4 +1,4 @@
-package com.bengisusahin.movieapp.ui.theme
+package com.bengisusahin.movieapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
