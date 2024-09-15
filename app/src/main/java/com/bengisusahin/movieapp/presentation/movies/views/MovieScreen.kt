@@ -41,11 +41,9 @@ fun MovieScreen(
 
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.movies){ movie ->
-                    Text(text = movie.Title,
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center,
-                        color = Color.White)
-
+                    MovieListRow(movie = movie, onItemClick = {
+                        // navCont
+                    })
                 }
             }
         }
