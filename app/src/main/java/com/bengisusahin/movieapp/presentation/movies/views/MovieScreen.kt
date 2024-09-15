@@ -16,6 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.bengisusahin.movieapp.presentation.Screen
 import com.bengisusahin.movieapp.presentation.movies.MoviesEvent
 import com.bengisusahin.movieapp.presentation.movies.MoviesViewModel
 
@@ -42,7 +43,7 @@ fun MovieScreen(
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.movies){ movie ->
                     MovieListRow(movie = movie, onItemClick = {
-                        // navCont
+                        navController.navigate(Screen.MovieDetailScreen.route+"/${movie.imdbID}")
                     })
                 }
             }
